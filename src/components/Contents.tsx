@@ -51,7 +51,12 @@ export const Contents: FC<contentsType> = memo((props) => {
                                 }}>edit</button>
                             }
                             {/* 登録内容の削除ボタン */}
-                            <button className="removeBtn" type="button" onClick={() => { removeUsers(i) }}>remove</button>
+                            <button className="removeBtn" type="button"
+                                onClick={() => {
+                                    removeUsers(i);
+                                    editFunction(false);
+                                }}
+                            >remove</button>
                         </div>
                     </li>
                 ))
